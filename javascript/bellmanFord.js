@@ -44,3 +44,15 @@ function bellmanFord(graph, source)
   return {distances, previous};
 }
 
+// example usage
+const graph = {
+  A: { B: -1, C: 4 },
+  B: { C: 3, D: 2 },
+  C: { B: 2, E: 2 },
+  D: { E: -1 },
+  E: {}
+};
+
+const{distances, previous} = bellmanFord(graph, 'A');
+console.log(distances);
+console.log(previous);
